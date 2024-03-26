@@ -7,7 +7,7 @@ const Home = () => {
   let [data, setData] = useState(null);
   let [page, setPage] = useState(1);
   let [currentSearch, setCurrentSearch] = useState("");
-  const authKey = "YlymEly0yBCizM0PFUqxGfqWTZIBN5VKM2PjDhtPEx7SGRY5O69wtNQ8";
+  const authKey = process.env.AUTH_KEY;
   const initialURL = "https://api.pexels.com/v1/curated?page=1&per_page=15";
   const searchURL = `https://api.pexels.com/v1/search?query=${currentSearch}&per_page=15&page=1`;
 
